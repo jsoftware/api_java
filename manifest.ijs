@@ -9,7 +9,7 @@ Contributed by Bill Lam
 )
 
 
-VERSION=: '1.0.0'
+VERSION=: '1.0.1'
 
 FILES=: 0 : 0
 LICENSE
