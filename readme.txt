@@ -45,6 +45,8 @@ project source:
 
   In your own project, initialize a JInterface object as below.
 
+  first, define JAVA_HOME inside cmd or sh files, then
+
   compile sample java source files
     Windows: compile.cmd
     Linux/Mac: ./compile.sh
