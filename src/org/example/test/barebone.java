@@ -9,7 +9,13 @@ public class barebone
 
 // define full paths to J bin folder, shared library, and profile
 
-// typical for linux/macos install in home (dylib instead of so for macos)
+// typical for macos install in home
+// static String libjDir="/Users/bill/j64-807/bin";
+// static String libj="libj.dylib";
+// static String jprofile="/Users/bill/j64-807/bin/profile.ijs";
+// static String BINPATH="/Users/bill/j64-807/bin";
+
+// typical for linux install in home
 // static String libjDir="/home/bill/j64-807/bin";
 // static String libj="libj.so";
 // static String jprofile="/home/bill/j64-807/bin/profile.ijs";
@@ -31,13 +37,14 @@ public class barebone
   {
 
 // J boot up and load profile
-// libjnative.so/jnative.dll must in lib path
+// libjnative.so/jnative.dll must in java.library.path
 
     JInterface.libjDir=libjDir;
     JInterface.libj=libj;
     JInterface jInterface = new JInterface();
 
 // not load any profile
+// jprofile and BINPATH ignored
 
 // your stuff here
 

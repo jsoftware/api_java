@@ -23,14 +23,22 @@ installation:
 
 > http://www.jsoftware.com/download/java/
 
-  Windows:
-    copy the jnative.dll to a folder inside PATH
+  copy the jnative shared library to a folder insdie
+  Java library path or run java with the java.library.path
+  argument, eg.
+
+  java -Djava.library.path=/path/folder ....
+
+  default java.library.path depends on OS and Java versions
+
+  Windows: PATH
     eg. c:/Windows/system32
 
-  Linux/Mac:
-    copy libjnative.so to a folder inside LD_LIBRARY_PATH
-    or system library folder and chmod 644
+  Linux: LD_LIBRARY_PATH or system library folders
     eg. /usr/lib/x86_64-linux-gnu
+
+  Mac: JAVA_LIBRARY_PATH or some other folders (you google)
+    eg. /Library/Java/Extensions
 
 project source:
   put copy the folder com/jsoftware/j to project source code tree
@@ -46,12 +54,14 @@ project source:
     Windows: ./run-barebone.cmd ./run-jd.cmd
     Linux/Mac: ./run-barebone.sh ./run-jd.sh
 
-WINDOWS USERS:
-  before compiling the 2 examples, first change the
-  full paths to J bin folder, shared library, and profile
+IMPORTANT:
+  before compiling, first change the
+  full paths to J bin folder, shared library, and profile in
+    src/org/example/test/barebone.java
+    src/org/example/test/jdtest.java
 
-  change the value of JAVA_HOME to your own Java bin folder
-  or comment the the if %JAVA_HOME% is already defined
+  change the value of JAVA_HOME to your own Java home folder
+  or comment the the if JAVA_HOME is already defined
 
 // -------------------------------------------------------
 // put copy of com/jsoftware/j folder into your source code tree
